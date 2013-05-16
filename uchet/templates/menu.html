@@ -6,24 +6,26 @@
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container" >
-    <table class="table table-striped table-bordered table-hover table-condensed">
-<thead bgcolor="LightSlateGray">
+      <div class="container" >
+      <table class="table table-striped table-bordered table-hover table-condensed">
+      <thead bgcolor="LightSlateGray">
   <tr>
-        <th class="span2">Время</th>
-        <th class="span5">Клиент</th>
-        <th class="span5">К кому</th>
-        <th class="span3">Процедура</th>
+        <th class="span2" name="menu_time">Время</th>
+        <th class="span5" name="menu_klient">Клиент</th>
+        <th class="span5" name="menu_agent">К кому</th>
+        <th class="span3" name="proc">Процедура</th>
     </tr>
 </thead>
 
 <tbody>
+     {% for each in infa %}
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>{{ each.addtime_date|date:"G:i" }}</td>
+        <td>{{each.klient}}</td>
+        <td>{{each.agent}}</td>
+        <td>{{each.proc}}</td>
     </tr>
+    {% endfor %}
 </tbody>
 </table>
 
@@ -31,7 +33,6 @@
   <a class="btn btn-mini btn-primary" type="button" href="/list1">         
           Добавить          
   </a>
-
 </p>
 
 </div>
