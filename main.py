@@ -30,3 +30,5 @@ def menu(request):
 def list1(request):
     return render_to_response('list1.html')
  
+def java(request):
+    return render_to_response('java.html')

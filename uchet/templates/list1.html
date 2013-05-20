@@ -4,19 +4,50 @@
     <title>Добавление строки</title>
     <!-- Bootstrap -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+<SCRIPT type='text/javascript'>
+
+function validate(){
+   //Считаем значения из полей 
+   var x=document.forms["form"]["klient"].value;
+   var y=document.forms["form"]["agent"].value;
+   var z=document.forms["form"]["proc"].value;
+   //Если поле name пустое выведем сообщение и предотвратим отправку формы
+   if (x.length==0){
+      document.getElementById("klientf").innerHTML='*';
+      return false;
+   }
+   if (y.length==0){
+      document.getElementById("agentf").innerHTML='*';
+      return false;
+   }
+   if (z.length==0){
+      document.getElementById("procf").innerHTML='*';
+      return false;
+   }
+  }
+</SCRIPT>
+
+
+
+
   </head>
   <body>
 
+
+
 <div class= "form" align= "center">
-<form method='POST' action='/menu/'>
+<form name="form" method='POST' action='/menu/' onsubmit="return validate( );">
   <fieldset>
     <legend>Добавление строки</legend>
     <h5>Клиент</h5>
-    <input type="text" placeholder="Фамилия И.О." name="klient">
+    <span style="color:red" id="klientf"></span> <input type="text" placeholder="Фамилия И.О." name="klient"> 
     <h5>К кому</h5>
-    <input type="text" placeholder="Фамилия И.О." name="agent">
+    <span style="color:red" id="agentf"></span> <input type="text" placeholder="Фамилия И.О." name="agent">
     <h5>Процедура</h5>
-    <input type="text" placeholder="Процедура" name="proc">
+    <span style="color:red" id="procf"></span> <input type="text" placeholder="Процедура" name="proc">
     <h5>Время</h5>
   <div class = input>
     <input type="text" style="width:25px;" name="hourse"> 
@@ -79,9 +110,8 @@
  <div>
   </fieldset>
 </form>
-
 </div>
 </body>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
 </html>
