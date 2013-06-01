@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Добавление строки</title>
+    <!-- Bootstrap -->
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js" /></script>
+</head>
+<body>
+
+<form>
+      <label>Lets edit something:</label> <br />
+      <input type="text" value="Edit somethin" /> <br /> <br />
+      <input type="submit" value="Update" />
+      <button id="delete-button">Delete</button>
+    </form>
+
+<script type="text/javascript">
+
+$(function(){
+      
+        $('#delete-button').usableDelete({
+          'deleteLink':    "/?action=delete&id=9000",
+          'sureText':      "Точно?",
+          'deleteText':    "Удалить",
+          'doNotText':     "Не надо"
+        });
+      
+      });
+
+
+</script>
+
+</body>
+</html>

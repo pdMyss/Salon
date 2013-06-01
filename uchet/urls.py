@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from main import menu
 from main import list1
 from main import java
+from main import menu_js
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
@@ -10,6 +11,8 @@ urlpatterns = patterns('',
 	('^menu/$', menu),
 	('^list1/$', list1),
 	('^java/$', java),
+    ('^menu_js/$', menu_js),
+
     # Examples:
     # url(r'^$', 'uchet.views.home', name='home'),
     # url(r'^uchet/', include('uchet.foo.urls')),
