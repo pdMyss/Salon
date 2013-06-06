@@ -3,6 +3,7 @@ from main import menu
 from main import list1
 from main import java
 from main import menu_js
+from django.conf import settings
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
