@@ -47,10 +47,9 @@
     
     <script type="text/javascript">
        $("i#delete").click(function(evt) {
-         $(evt.target).parent().parent().fadeOut(300);
-         console.log(evt);
-       })
-
+        var row = $(evt.target).parent().parent().fadeOut(300); 
+        row.find("td").css('background-color','#FA8072');
+});         
 
     </script>
   </body>
