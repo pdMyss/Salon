@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from infa.models import Name, uchet
 import datetime
+import json
 
 def save(klient, agent, proc, addtime ):
     n = uchet(klient=klient, agent=agent, proc=proc, addtime_date=addtime)
@@ -34,3 +35,11 @@ def java(request):
     return render_to_response('java.html')  
 def menu_js(request):
     return render_to_response('menu_js.js')
+
+def ajax_delete(request):
+    b = uchet.objects.get()
+    if request.is_ajax():
+       b.delete      
+    return HttpResponse(message)
+
+

@@ -3,6 +3,7 @@ from main import menu
 from main import list1
 from main import java
 from main import menu_js
+from main import ajax_delete
 from django.conf import settings
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -13,6 +14,7 @@ urlpatterns = patterns('',
 	('^list1/$', list1),
 	('^java/$', java),
     ('^menu_js/$', menu_js),
+    (r'^ajax_delete/$', ajax_delete),
 
     # Examples:
     # url(r'^$', 'uchet.views.home', name='home'),
