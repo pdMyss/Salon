@@ -23,7 +23,7 @@
 
 <tbody></tbody>
      {% for each in infa %}
-    <tr>         
+    <tr>
         <td>{{each.addtime_date|date:"G:i"}}</td>
         <td>{{each.klient}}</td>
         <td>{{each.agent}}</td>
@@ -35,8 +35,8 @@
 </table>
 
 <p align="right">
-  <a class="btn btn-mini btn-primary" type="button" href="/list1">         
-          Добавить          
+  <a class="btn btn-mini btn-primary" type="button" href="/list1">
+          Добавить
   </a>
 </p>
 
@@ -44,12 +44,12 @@
 </div>
     <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
     <script src="/static/js/bootstrap.min.js" type="text/javascript"></script>
-    
+
     <script type="text/javascript">
        $("i#delete").click(function(evt) {
-        var row = $(evt.target).parent().parent().fadeOut(300); 
+        var row = $(evt.target).parent().parent().fadeOut(300);
         row.find("td").css('background-color','#FA8072');
-});         
+});
 
     </script>
   </body>
